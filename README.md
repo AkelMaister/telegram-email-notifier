@@ -1,4 +1,4 @@
-# telegram-email-notifier
+# Email notification to telegram bot
 
 
 ## Variables:
