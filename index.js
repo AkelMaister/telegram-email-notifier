@@ -45,13 +45,11 @@ mailListener.on("server:connected", function(){
 });
 
 mailListener.on("server:disconnected", function(){
-  console.log("imapDisconnected. Try to reconnect");
-  mailListener.start();
+  process.exit(2);
 });
 
 mailListener.on("error", function(err){
-  console.log(err + ". Try to reconnect");
-  mailListener.start();
+  process.exit(3);
 });
 
 mailListener.on("mail", function(mail, seqno, attributes){
